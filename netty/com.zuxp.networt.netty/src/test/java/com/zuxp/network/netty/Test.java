@@ -15,7 +15,11 @@ public class Test {
 		for(int i =0; i<100000000; i++){
 			chooser2();
 		}
-		
+
+
+		Long a = 10L;
+		a.intValue();
+
 		System.out.println(System.currentTimeMillis() -startTime2);
 		
 	}

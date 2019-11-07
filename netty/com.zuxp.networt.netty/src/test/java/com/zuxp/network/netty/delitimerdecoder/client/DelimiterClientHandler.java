@@ -6,6 +6,7 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.channel.socket.ChannelInputShutdownReadComplete;
 
+import java.math.BigDecimal;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
@@ -22,6 +23,8 @@ public class DelimiterClientHandler extends ChannelInboundHandlerAdapter {
             ByteBuf buf = Unpooled.wrappedBuffer(msg);
             ctx.writeAndFlush(buf);
         }
+
+        BigDecimal.valueOf(12L).intValue();
     }
 
     @Override
